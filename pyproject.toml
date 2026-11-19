@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantrix"
+version = "0.1.0"
+description = "High-performance Python library for accelerated quantum-inspired parallel matrix and tensor operations."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.9"
+authors = [
+    { name = "Quantrix Open Source Contributors" }
+]
+keywords = [
+    "quantum-computing",
+    "tensor-networks",
+    "matrix-operations",
+    "parallel-computing",
+    "einsum",
+    "machine-learning",
+    "numba",
+    "pytorch"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = [
+    "numpy>=1.22.0",
+    "scipy>=1.8.0",
+]
+
+[project.optional-dependencies]
+acceleration = [
+    "numba>=0.56.0",
+    "torch>=2.0.0",
+]
+dev = [
+    "pytest>=7.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/quantrix/quantrix"
+Repository = "https://github.com/quantrix/quantrix"
+Documentation = "https://github.com/quantrix/quantrix#readme"
+Tracker = "https://github.com/quantrix/quantrix/issues"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
